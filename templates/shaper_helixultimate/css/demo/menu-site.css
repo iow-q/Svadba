@@ -1,0 +1,145 @@
+.menu_site {
+      align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+animation: spFadeIn 0.5s;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+
+.menu__link {
+  list-style: none;
+  transition: transform .4s;
+  cursor: pointer;
+}
+
+.menu__link:hover {
+  transform: scale(110%);
+}
+
+.menu__ancor {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  transition: color .4s;
+  
+}
+
+.menu__ancor:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.menu__button {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin: 30px auto;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: none;
+} 
+.menu__span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #565656;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .3s ease-in-out;
+}
+.menu__button .menu__span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+.menu__button .menu__span:nth-child(2) {
+  top: 12px;
+  transform-origin: left center;
+}
+.menu__button .menu__span:nth-child(3) {
+  top: 24px;
+  transform-origin: left center;
+}
+
+.menu__button.open .menu__span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+.menu__button.open .menu__span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.menu__button.open .menu__span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 25px;
+  left: 8px;
+}
+
+@media screen and (max-width: 1700px) {
+  .menu_site {
+    height: 70px;
+    margin: 0;
+  }
+
+  .menu__links {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+
+}
+
+@media screen and (max-width: 800px) {
+  .menu_site {
+    height: 50px;
+  }
+
+  .menu__links {
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .menu_site {
+    display:none;
+    justify-content: flex-end;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+
+  .menu__button {
+    display:block;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 10;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
+}

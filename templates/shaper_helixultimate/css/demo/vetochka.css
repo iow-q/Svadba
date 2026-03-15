@@ -1,0 +1,1074 @@
+#vetochka {
+    --primary-color: #333;
+    --secondary-color: #e9e9e9; /*Для обводок блоков*/ 
+    --background-color: #b6b7b7;
+     --button-color: #ceafaf;
+    --buttontext-color: #ffffff;
+    --header-color: #ceafaf;
+    --text-color: black;
+    --main-font: 'Hagin', sans-serif; /* Основной шрифт */
+    --beauty-font: 'WonderScript', sans-serif; /* Шрифт для заголовков */
+    --secondary-font: 'Gotham', sans-serif; /* Второй шрифт */
+}
+
+ #vetochka .header__welcome img{
+      position: absolute;
+    text-align: center;
+    z-index: -10;
+    top: calc(45vh + 150px);
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    }
+
+ #vetochka .rsvp__string input{
+    width: 400px;
+    font-size: 1.5rem;
+        height: 70px;
+}
+/*dresscode*/
+#vetochka .dresscode__color{
+  border-radius: 15%;
+  max-width: 100px;
+    max-height: 100px;
+}
+#vetochka .dresscode__color_var_one{
+  background-color: #917d85;
+}
+#vetochka .dresscode__color_var_two{
+  background-color: #dfb7c6;
+}
+#vetochka .dresscode__color_var_three{
+  background-color: #fdf4ed;
+}
+#vetochka .dresscode__color_var_four{
+  background-color: #e1cebe;
+}
+#vetochka .dresscode__color_var_five{
+  background-color: #666766;
+}
+#vetochka .burger-menu__link a:hover{
+  color:rgba(0, 0, 0, 0.6);
+}
+#vetochka .info-date__invitation {
+    padding: 0 10%;
+    margin: auto;
+    max-width: 1000px;
+}
+#vetochka .detail-text, #vetochka .rsvp__text {
+        
+        padding: 0 0 20px 0;
+        font-size: 30px;
+    line-height: 36px;
+    }
+ #vetochka
+   {
+        font-size: 30px; 
+    }
+ #vetochka .timetable__header{
+        font-family: var(--beauty-font);
+    font-size: 150px;
+    line-height: 150px;
+    height: auto;
+    color: var(--header-color);
+    }
+    
+#vetochka .timetable__text {
+        font-size: 22px;
+    }
+#vetochka .info-date__info{
+    margin-top: 55px;
+}
+    
+    #vetochka .small_vetv{
+    width: 10vw;
+    padding: 5vw 0;
+    margin: auto;
+}
+#vetochka .footer-site {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 0;
+    position: relative;
+}
+#vetochka .dresscode__colors {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+    min-width: 30%;
+    gap: 30px;
+    
+}
+
+#vetochka .question__string {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 30px;
+    border: none;
+    font-size: 30px;
+    align-items: flex-start;
+    padding: 0;
+}
+#vetochka .rsvp__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 700px;
+    margin: 50px 0% 0 25%;
+}
+
+#vetochka .rsvp__buttons {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    gap: 35px;
+    align-self: center;
+}
+#vetochka .question__bloks{
+    max-width: 1200px;
+    
+    width: 100%;
+}
+#vetochka .question__string .question__input{
+    width: 500px;
+    height: 70px;
+}
+#vetochka .rsvp__button {
+        background-color: var(--button-color);
+    color: var(--buttontext-color);
+    font-size: 28px;
+    height: auto;
+    font-weight: normal;
+    width: 250px;
+    padding: 10px 10px;
+    }
+
+#vetochka .details {
+        height: auto;
+        padding: 0;
+            margin: auto;
+    max-width: 1000px;
+    }
+#vetochka .rsvp__text {
+        font-size: 30px;
+        line-height: 36px  ;
+        margin: auto;
+    max-width: 1000px;
+    }
+    
+#vetochka .rsvp{
+        margin: auto;
+    max-width: 1000px;
+    }
+
+#vetochka .dresscode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   padding: 30px 0 10px 0;
+    position: relative;
+    margin: auto;
+    max-width: 1000px;
+
+}
+#vetochka .question__visible-radio {
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.645);
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+#vetochka .question__visible-checkbox {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.645);
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#vetochka{
+    font-family: var(--main-font);
+    position: relative;
+    overflow: hidden;
+    color: var(--text-color);
+}
+
+#vetochka .title__title, #vetochka h1{
+font-family: var(--beauty-font);
+font-size: 270px;
+color: var(--header-color);
+}
+
+#vetochka .footer__names{
+  font-family: var(--beauty-font);
+  font-size:135px;
+}
+#vetochka .footer__names {
+    height: 120px;
+}
+#vetochka .footer__name {
+    height: 30px;
+}
+#vetochka .info-date__text{
+    align-self:center;
+}
+
+#vetochka .top__image {
+   z-index:3;
+   right: -140px;
+   top: 0;
+}
+  #vetochka .info-date__what{
+        
+        font-family: var(--beauty-font);
+    font-size: 120px;
+    line-height: 70px;
+    }
+
+#vetochka .menu_site{
+  background-color: white;
+}
+
+
+#vetochka #place{
+   padding: 200px 0 0px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+#vetochka .info-date__place{
+    display: flex;
+    gap: 20px;
+}
+
+#vetochka .header__image {
+    max-width: none;
+    height: 74vh;
+    left: 5px;
+    top: 50vh;
+    rotate: 102deg;
+    transform: scale(1, -1);
+}
+#vetochka .info-date__image{
+  right: -32px;
+  bottom: -47vh;
+    transform: rotate(67deg);
+}
+#vetochka .info-date__image2{
+        align-self: center;
+    transform: rotate(90deg);
+
+}
+#vetochka .top__image {
+    right: -55px;
+    top: 4vh;
+    transform: scale(1, -1);
+    rotate: 355deg;
+}
+
+#vetochka .burger-menu{
+  background-color:#fff;
+}
+#vetochka .burger-menu__ancor{
+  color:#252525;
+}
+
+#vetochka .info-date__info{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+#vetochka .info-date__text_position_right {
+    font-family: var(--beauty-font);
+    font-size: 180px;
+    line-height: 180px;
+    color: var(--header-color);
+    align-self: center;
+    margin-top: -15px;
+    margin-left: -80px;
+}
+#vetochka .info-date__text_position_center{
+    font-family: var(--main-font); font-size: 30px;
+}
+
+#vetochka .info-date__text_position_left {
+    font-family: var(--beauty-font);
+    font-size: 370px;
+    line-height: 30px;
+    color: var(--header-color);
+    bottom: 30px;
+    position: relative;
+}
+
+
+
+
+#vetochka .question__text{
+  /*  text-align: left;*/
+  }
+#vetochka .img_vetv{
+  position: absolute;
+  height: 75vh;
+  object-fit: contain;
+}
+#vetochka .question__vetv{
+    position: absolute;
+    top: 2%;
+    left: -1%;
+    width: 400px;
+    max-width: none;
+    height: 150vh;
+   }
+
+#vetochka .plan__image{
+  right: -32px; transform: rotate(90deg); top: 79%; height: 65vh;
+}
+
+#vetochka .question__unvisible:checked + .question__visible-checkbox {
+    background-color: var(--header-color);
+}
+
+#vetochka .question__unvisible:checked + .question__visible-radio {
+    background-color: var(--header-color);
+}
+
+/***timer***/
+#vetochka .timer__number_var_day{
+ background-color: #707071;
+}
+#vetochka .timer__number_var_hours{
+ background-color: #AA9FA9;
+}
+#vetochka .timer__number_var_minutes{
+ background-color: #706E7C;
+}
+#vetochka .timer__number_var_seconds{
+ background-color:#535F64;}
+
+/***footer***/
+#vetochka .footer__image{
+ position: absolute;
+    max-width: none;
+    height: 67vh;
+        right: -2%;
+   rotate: 108deg;
+}
+#vetochka .bottom__image{
+position: absolute;
+    max-width: none;
+    height: 67vh;
+    bottom: -30vh;
+    left: -2%;
+    transform: scale(1, -1);
+    rotate: 75deg;
+}
+
+  #vetochka .timer__blocks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0 0 ;
+    min-width: 30%;
+    gap: 20px;
+}
+  
+  #vetochka .timer__block{
+    border-radius: 50%;
+    color:white;
+     width: 62px;
+  height: 62px;
+  }
+
+#vetochka .header__text {
+    font-size: 85px;
+    position: absolute;
+    top: 45vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+  #vetochka .info-date__who, #vetochka .title__title, #vetochka .question__header{
+      font-family: var(--beauty-font); 
+      font-size: 180px; 
+      line-height: 133px; 
+      color: var(--header-color);
+      height: auto;
+  }
+  #vetochka .small_vetv{
+       min-width: 80px;
+  }
+  
+  
+  @media screen and (max-width: 1700px) {
+    #vetochka .dresscode__colors {
+        margin: 50px 0;
+    gap: 20px;
+    }
+   #vetochka .dresscode__description {
+        font-size: 30px;
+        line-height: 36px;
+        width: 100%;
+        margin: 0;
+    }
+}
+  
+  @media screen and (max-width: 1300px){
+ #vetochka .timer__blocks {
+    margin: 40px 0 0;
+      gap: 20px;}
+  #vetochka .question__vetv {
+    width: 300px;
+    height: 150vh;
+}
+  #vetochka .dresscode__colors {
+        margin: 40px 0 0;
+        gap: 20px;
+    }
+     #vetochka .dresscode__color{
+    
+    max-width: 50px;
+    max-height: 50px;
+}
+#vetochka .dresscode__description {
+        font-size: 24px;
+        line-height: 30px;
+        width: 80%;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 1300px) {
+   #vetochka .question {
+        padding: 80px 0;
+    }
+    #vetochka .detail-text, #vetochka .rsvp__text {
+    font-size: 24px;
+    line-height: 30px;
+}
+}
+  @media screen and (max-width: 800px) {
+     #vetochka .question__vetv, #vetochka .plan__image {
+       display:none;
+     }
+        #vetochka .dresscode__description {
+        width: 80%;
+        margin: 0;
+    }
+    
+     #vetochka .info-date__text, #vetochka .dresscode__description {
+       font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+    }
+   #vetochka .info-date__text_position_right{
+       display: none;
+   }
+    
+      #vetochka .dresscode__color{
+    max-width: 60px;
+    max-height: 60px;
+}
+    #vetochka .header__text{
+      line-height: 1.5;
+      overflow-wrap: break-word;
+      word-spacing: 9999999px;
+      font-size: 60px;
+    }
+     #vetochka .header__welcome p{
+       top: 50vh;
+}
+    #vetochka .header__text-image{
+      width: 108%;
+    top: 16%;
+    }
+#vetochka .dresscode__colors {
+    margin: 30px 0 50px;
+    gap: 15px;
+  }
+    #vetochka .img_vetv{
+      height: 42vh;
+    }
+    #vetochka .header__image{
+     top: -100px;
+    left: -56px;
+    rotate: 147deg;
+       display:block;
+    }
+    
+    #vetochka .info-date__text{
+     margin-top: 55px;
+     text-align: center;
+    }
+    #vetochka .title__title{
+     margin-top: 5px;
+    }
+    #vetochka .info-date__who{
+        line-height: 50px;
+    }
+    #vetochka .info-date__what{
+    font-size: 80px;
+    line-height: 70px;
+    }
+    #vetochka .info-date__place{
+        flex-direction:column;
+        gap: 0px;
+    }
+    #vetochka .info-date__image2{
+    transform: rotate(180deg);
+    width: 20%;
+    margin: 30px;
+    }
+    #vetochka .timetable__image, #vetochka .dresscode__image, #vetochka .details__image{
+        text-align: -webkit-center;
+    padding: 5vh 2vh;
+    }
+    #vetochka .info-date__text_position_right{
+               margin-top: -25px;
+        margin-left: -50px;
+    }
+    #vetochka .info-date__text_position_center{
+        font-size: 23px;
+        line-height: 30px;
+    }
+    #vetochka .rsvp__label{
+        font-size: 12pt;
+    }
+    #vetochka .detail-img-pc{
+        display: none;
+    }
+    #vetochka .question__container .rsvp__form{
+        align-items: flex-start;
+    }
+    #vetochka .info-date__who{
+        font-size:100px;
+    }
+    #vetochka .top__image {
+   right: -15px;
+        top: 65vh;
+    transform: scale(1, -1);
+    rotate: 283deg;
+}
+#vetochka .info-date__image {
+    right: -32px;
+    bottom: -34vh;
+    transform: rotate(90deg);
+}
+
+#vetochka .info-date__where {
+      font-size: 20px;
+        line-height: 32px;
+        margin: 0;
+    }
+    #vetochka .timetable__header{
+   font-size: 100px;
+        line-height: 100px;
+        height: auto;
+    margin: 0px 0 10px 0;
+    }
+   
+     #vetochka .timetable__text {
+        font-size: 20px;
+    }
+   #vetochka .timetable__pic {
+        width: 80px;
+        height: 80px;
+    }
+    
+     #vetochka .timetable {
+        padding: 0px 0;
+    }
+    #vetochka #place {
+    padding: 120px 0 80px 0;
+   
+}
+
+    #vetochka .timetable__block {
+        width: calc(100% - 40px);
+        max-width: 350px;
+    }
+    #vetochka .dresscode {
+        padding: 30px 0 0 0;
+    position: relative;
+}
+    #vetochka .details,    #vetochka .rsvp {
+        padding: 0px 0 30px 0;
+    }
+    
+    #vetochka .detail-text,  #vetochka .rsvp__text{
+              font-size: 18px;
+        line-height: 24px;
+    width: 80%;
+    margin: 0px auto;
+   padding: 0 0 20px 0;
+    }
+    #vetochka .rsvp__container{
+        padding: 0;
+    }
+       #vetochka .rsvp__button {
+        width: 130px;
+        height: 35px;
+        font-size: 12px;
+        font-size: 22px;
+        height: auto;
+        font-weight: normal;
+        width: 150px;
+        padding: 5px 10px;
+    }
+    
+        #vetochka .rsvp__label {
+        font-size: 18px;
+        margin: 0 10px 0 0;
+        line-height: 20px;
+    }
+   #vetochka .rsvp__input{
+               width: 160px;
+        margin: 5px 0;
+    }
+    #vetochka .rsvp__string input {
+    width: 160px;
+    font-size: 1rem;
+    height: 40px;
+}
+       #vetochka .question__text {
+       font-size: 18px;
+        text-align: center;
+        line-height: 24px;
+       width: 100%;
+                margin: 0px 0 10px 0;
+    }
+   #vetochka .question__text-mini{
+         font-size: 16px;
+   
+    margin: 10px 0;
+    color: gray;  
+   }
+       #vetochka .question__string {
+        margin: 0 0 15px;
+        font-size: 18px;
+        width: 100%;
+    }
+#vetochka .rsvp__form {
+        width: 80%;
+        margin: 10px auto 0;
+        display: flex
+;
+    flex-direction: column;
+    align-items: flex-end;
+    }
+         #vetochka  .opros-grup-title {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+    #vetochka .question__label-input {
+        font-size: 20px;
+        margin: 0 0 10px 0;
+    }
+   #vetochka .question__label {
+        margin: 0px 0 5px 0;
+    }
+    
+    #vetochka fieldset.question__string{
+        margin: 0px;
+    }
+       #vetochka .timer__number {
+        font-size: 22px;
+    }
+    #vetochka .footer__image{
+      position: absolute;
+       right: -80px;
+        bottom: 200px;
+        transform: rotate(354deg);
+        height: 42vh;
+        position: absolute;
+        object-fit: contain;
+    }
+      #vetochka .question {
+        padding: 0px 0 40px 0;
+    }
+        #vetochka .footer-site {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0px;
+        margin: 90px 0 80px;
+    }
+    #vetochka .bottom__image {
+    position: absolute;
+    max-width: none;
+    height: 37vh;bottom: -10vh;
+    left: -12%;
+    transform: scale(1, -1);
+    rotate: 103deg;
+}
+    #vetochka .footer__name {
+    height: 55px;
+    line-height: 105px;
+}
+#vetochka .footer__names {
+    font-size: 105px;
+    padding: 0 20%;
+}
+   #vetochka .footer__text {
+        font-size: 22px;
+        margin: 0;
+    }
+    #vetochka .error-rsvp{
+    margin: 0 auto;
+    padding-bottom: 10px;
+    }
+    #vetochka .burger-menu {
+   
+    padding: 100px 0px;
+}
+#vetochka .small_vetv{
+    
+    padding: 6vw 0;
+}
+  }
+  
+  #vetochka .header {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    /* position: relative; */
+}
+
+  @media screen and (max-width: 1700px) {
+   #vetochka .header {
+        height: calc(100vh - 70px);
+    }
+}
+
+  @media screen and (max-width: 1300px) and (orientation: portrait) {
+   #vetochka .header {
+        height: calc(100vh - 50px);
+    }
+}
+
+    @media screen and (max-width: 850px) and (orientation: portrait) {
+  #vetochka  .header {
+        height: 100vh;
+    }
+}
+#vetochka .header__desktop {
+    height: 100%;
+    display: flex
+;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 250px;
+}
+
+@media screen and (max-width: 1700px) {
+   #vetochka  .header__desktop {
+        gap: 170px;
+    }
+}
+@media screen and (max-width: 1300px) and (orientation: portrait) {
+    #vetochka .header__desktop {
+        gap: 120px;
+        width: 75%;
+    }
+}
+@media screen and (max-width: 1300px) and (orientation: portrait) {
+    #vetochka .header__desktop {
+        gap: 120px;
+        width: 70%;
+    }
+}
+@media screen and (max-width: 850px) and (orientation: portrait) {
+     #vetochka .header__desktop {
+        gap: 70px;
+        width: 75%;
+    }
+    #vetochka .header__welcome img {
+    top: calc(50vh + 20px);
+}
+}
+@media screen and (max-width: 450px) and (orientation: portrait) {
+    #vetochka .header__desktop {
+        gap: 45px;
+        width: 85%;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 450px) and (orientation: portrait) {
+  #vetochka  .header__desktop {
+        flex-direction: column;
+        width: 85%;
+    }
+}
+#vetochka .timetable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0 200px;
+    position: relative;
+}
+
+@media screen and (max-width: 1700px) {
+   #vetochka .timetable {
+        padding: 0;
+       /* height: 100vh;*/
+    }
+}
+@media screen and (max-width: 1300px) {
+  #vetochka  .timetable {
+        padding: 80px 0;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+  #vetochka  .timetable {
+        padding: 50px 0;
+    }
+    
+    #vetochka .title__title, #vetochka .question__header {
+    font-size: 120px;
+    line-height: 100px;
+}
+    #vetochka .info-date__who{
+        font-size: 100px;
+        line-height: 60px;
+    }
+}
+@media screen and (max-width: 800px) {
+    #vetochka .timetable {
+        padding: 0px 0;
+    }
+}
+
+ #vetochka .rsvp__string {
+    display: flex;
+    flex-direction: row;
+    margin: 0 0 30px;
+    align-items: center;
+     gap: 20px;
+   
+}
+
+ #vetochka .question__text-mini{
+     
+ }
+@media screen and (max-width: 1700px) {
+  #vetochka  .rsvp__string {
+        display: flex;
+        flex-direction: row;
+        margin: 0 0 30px;
+    }
+}
+@media screen and (max-width: 1300px) {
+   #vetochka .rsvp__string {
+        margin: 0 0 25px;
+        
+    }
+}
+@media screen and (max-width: 800px) {
+   #vetochka .rsvp__string {
+        margin: 0 0 15px;
+    }
+     #vetochka .question__text-mini{
+     font-family: 'Hagin';
+    font-size: 16px;
+    line-height: 24px;
+ }
+ #vetochka .question__string .question__input {
+    width: 100%;
+    height: 50px;
+}
+}
+  #vetochka .question__unvisible {
+    font-family: inherit;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(0 0 0 0);
+}
+#vetochka .question__label {
+    margin: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+@media screen and (max-width: 1700px) {
+    #vetochka .question__label {
+        margin: 10px 0 0 0;
+    }
+}
+@media screen and (max-width: 1300px) {
+    #vetochka .question__label {
+        margin: 10px 0 0;
+    }
+}
+@media screen and (max-width: 800px) {
+    #vetochka .question__label {
+        margin: 0px 0 5px 0;
+    }
+    #vetochka .rsvp__string {
+    gap: 0px;
+}
+}
+#vetochka .timer__bloks {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    justify-content: space-between;
+}
+@media screen and (max-width: 1300px) {
+   #vetochka .timer__bloks {
+        gap: 7px;
+    }
+}
+@media screen and (max-width: 700px) {
+   #vetochka .timer__bloks {
+        gap: 18px;
+    }
+}
+
+ #vetochka .timer__block-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+}
+#vetochka .timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0;
+    position: relative;
+}
+#vetochka  .timer__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#vetochka  .timer__number {
+    font-size: 30px;
+    color: #f6eadf;
+    width: 72px;
+    height: 72px;
+    margin: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+}
+#vetochka .timer__text {
+    font-size: 24px;
+    margin: 10px 0 0;
+}
+#vetochka .footer__names {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: 450px;
+    align-items: flex-start;
+    text-shadow: -.1px 0 black;
+    width: 100%;
+}
+#vetochka .footer__name-end {
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 1700px) {
+    #vetochka .timer {
+        padding: 80px 0 0;
+    }
+   #vetochka .timer__text {
+        font-size: 24px;
+        margin: 7px 0 0;
+    }
+    #vetochka .footer-site {
+        margin: 70px 0 100px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+   #vetochka  .timer__block-info {
+        width: 80px;
+    }
+       #vetochka .footer-site {
+        margin: 80px 0 70px;
+    }
+      #vetochka  .timer__text {
+        font-size: 18px;
+    }
+      #vetochka  .timer {
+        padding: 60px 0 0;
+    }
+       #vetochka  .timer__bloks {
+        gap: 7px;
+    }
+}
+@media screen and (max-width: 700px) {
+    #vetochka .timer__block-info {
+        width: 55px;
+    }
+      #vetochka  .footer-site {
+        
+    }
+        #vetochka .timer__text {
+        font-size: 16px;
+    }
+       #vetochka .timer {
+        padding: 40px 0 0;
+    }
+       #vetochka  .timer__bloks {
+        gap: 18px;
+    }
+    #vetochka .timer__block {
+    border-radius: 50%;
+    color: white;
+    width: 62px;
+    height: 62px;
+    font-size: 22px;
+    
+        margin: auto;
+    max-width: 1000px;
+}
+}
+#vetochka .question {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1700px) {
+    #vetochka .question {
+        padding: 100px 0 0;
+    }
+}
+
+
+   

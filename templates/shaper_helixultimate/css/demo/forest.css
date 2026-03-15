@@ -1,0 +1,2962 @@
+@font-face {
+    font-family: gabriola;
+    font-style: normal;
+    font-weight: 200;
+    src: url(../../fonts/gabriola.ttf) format("ttf"),url(../../fonts/gabriola.woff) format("woff"),url(../../fonts/gabriola.woff2) format("woff2");
+}
+
+
+#forest {
+    --primary-color: #333;
+    --secondary-color: #eee;
+    --background-color: #fff;
+    --header-color: #333;
+    --text-color: #000;
+    --main-font: 'gabriola', sans-serif; /* Основной шрифт */
+    --beauty-font: 'WonderScript', sans-serif; /* Шрифт для заголовков */
+    --secondary-font: 'Hagin', sans-serif; /* Второй шрифт */
+}
+
+
+#forest{
+    font-family: var(--main-font);
+    font-size: 40px;
+  line-height: 50px;
+  color: var(--text-color);
+  overflow: hidden;
+}
+    #forest .header__date_info_month {
+        font-size: 26px;
+        margin: 0px 0 0;
+        line-height: 30px;
+    }
+    
+#forest .header__info_names{
+   font-family: var(--beauty-font);
+    font-size: 180px;
+    padding-bottom: 30px;
+    
+}
+#forest .footer__name{
+   font-family: var(--beauty-font);
+    font-size: 180px;
+    padding-bottom: 30px;
+    
+}
+
+
+#forest .title__title, #forest .dresscode__title, #forest .timer-title {
+     font-family: var(--beauty-font);
+    font-size: 150px;
+    padding-bottom: 0px;
+}
+
+
+#forest .info-date__who-title{
+    
+    font-family: var(--beauty-font);
+   font-size: 140px;
+    line-height: 50px;
+    margin: 50px 0 50px 0;
+}
+
+#forest #day-main {
+    font-family: var(--beauty-font);
+    font-size: 180px;
+    line-height: 50px;
+}
+
+#forest .header {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0;
+  height: calc(100vh - 100px);
+}
+
+#forest .header__desctop {
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 15vh 0 0 0;
+}
+
+#forest .header__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+    height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+#forest .header__names {
+  object-fit: contain;
+  width: 800px;
+  height: 250px;
+  margin: 170px 0 0;
+}
+
+#forest .header__date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40px auto 0;
+  gap: 35px;
+  height: 90px;
+}
+
+#forest .header__date_info_line {
+  box-sizing: border-box;
+  height: 60px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  margin: 7px 0 0;
+}
+
+#forest .header__text {
+  font-size: 36px;
+  color: black;
+  font-family: "gabriola", "Arial", sans-serif;
+  margin: 0;
+  line-height: 1;
+}
+
+#forest .header__block-line {
+  display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    gap: 0px;
+}
+
+
+#forest .header__date_info_day {
+  object-fit: contain;
+  width: 130px;
+  height: 90px;
+}
+
+#forest .header__date_info_month {
+  font-family: "gabriola", "Arial", sans-serif;
+  font-size: 30px;
+  margin: 15px 0 0;
+}
+
+@media screen and (max-width: 1700px) {
+ #forest .header {
+    height: calc(100vh - 70px);
+  }
+
+ #forest .header__names {
+    width: 550px;
+    height: 150px;
+    margin: 80px 0 0;
+  }
+
+  #forest .header__date {
+    margin: 30px auto 0;
+    gap: 25px;
+  }
+
+ #forest .header__date_info_line {
+    height: 40px;
+    width: 160px;
+  }
+  
+ #forest .header__text {font-size: 26px;
+        line-height: 23px;
+        padding: 5px 0;
+  }
+  
+ #forest .header__date_info_day {
+    width: 75px;
+    height: 75px;
+  }
+  
+   #forest  .header__date_info_month {
+        font-size: 26px;
+        margin: 0px 0 0;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+ #forest .header {
+    height: calc(100vh - 60px);
+  }
+
+ #forest .header__names {
+    width: 450px;
+    margin: 60px 0 0;
+  }
+
+ #forest .header__date {
+    gap: 20px;
+    height: 80px;
+  }
+
+ #forest#forest  .header__date_info_line {
+    height: 35px;
+    width: 130px;
+  }
+  
+  #forest .header__text {font-size: 26px;
+        line-height: 23px;
+        padding: 5px 0;
+  }
+  
+ #forest .header__date_info_day {
+    width: 65px;
+    height: 58px;
+  }
+  
+    #forest .header__date_info_month {
+        font-size: 30px;
+        margin: 0px 0 0;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  #forest .header {
+    height: calc(100vh - 50px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+
+ #forest .header__names {
+    width: 320px;
+    height: 180px;
+    margin: 70px 0 30px;
+  }
+
+ #forest .header__date {
+    gap: 15px;
+    height: 70px;
+  }
+  
+ #forest .header__date_info_line {
+    height: 30px;
+    width: 110px;
+    margin: 7px 0 0;
+  }
+  
+ #forest .header__text {
+    font-size: 24px;
+  }
+  
+ #forest .header__date_info_day {
+    width: 65px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+ #forest .header__background {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 380px) {
+ #forest .header__names {
+    width: 270px;
+    height: 150px;
+    margin: 70px 0 20px;
+  }
+
+  #forest .header__date {
+    gap: 10px;
+    height: 60px;
+  }
+  
+ #forest .header__date_info_line {
+    margin: 5px 0 0;
+    width: 100px;
+  }
+  
+ #forest .header__text {
+    font-size: 24px;
+  }
+  
+ #forest .header__date_info_day {
+    width: 60px;
+  }
+  
+ #forest .header__date_info_month {
+    font-size: 32px;
+  }
+}
+
+
+#forest .menu {
+  height: 100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: inherit;
+  z-index: 4;
+  transition: background-color 1s;
+}
+
+#forest .menu__background {
+  background-color: white;
+}
+
+#forest .menu__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 70%;
+}
+
+#forest .menu__link {
+  list-style: none;
+  transition: transform .4s;
+  cursor: pointer;
+}
+
+#forest .menu__link:hover {
+  transform: scale(110%);
+}
+
+#forest .menu__ancor {
+  text-decoration: none;
+  font-size: 32px;
+  color: black;
+  transition: color .4s;
+}
+
+#forest .menu__ancor:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#forest .menu__button {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin: 30px auto;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+} 
+#forest .menu__span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #264f26;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .3s ease-in-out;
+}
+#forest .menu__button .menu__span:nth-child(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+#forest .menu__button .menu__span:nth-child(2) {
+  top: 12px;
+  transform-origin: left center;
+}
+#forest .menu__button .menu__span:nth-child(3) {
+  top: 24px;
+  transform-origin: left center;
+}
+
+#forest .menu__button_open .menu__span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+  left: 8px;
+}
+#forest .menu__button_open .menu__span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#forest .menu__button_open .menu__span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 25px;
+  left: 8px;
+}
+
+@media screen and (max-width: 1700px) {
+#forest  .menu {
+    height: 70px;
+    margin: 0;
+  }
+
+ #forest .menu__ancor {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+ #forest .menu {
+    height: 60px;
+  }
+
+ #forest .menu__ancor {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+ #forest .menu {
+    height: 50px;
+  }
+
+  #forest .menu__links {
+    width: 80%;
+  }
+
+ #forest .menu__ancor {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+ #forest .menu {
+    justify-content: flex-end;
+    width: 0;
+    height: 0;
+    padding: 0;
+  }
+
+ #forest .menu__button {
+    position: fixed;
+    display: none;
+   
+    right: 20px;
+    top: 20px;
+    z-index: 3;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+  }
+}
+ 
+    #forest .header__info_names {
+    font-family: var(--beauty-font);
+    font-size: 150px;
+    padding-bottom: 30px;
+    line-height: 100px;
+}
+
+
+#forest .info-date {
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+}
+
+#forest .info-date__background {
+  width: 100%;
+  height: calc(100vh + 200px);
+  max-height: 1100px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#forest .info-date__cloud {
+  width: 1000px;
+  height: 1000px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: -750px;
+  z-index: -1;
+}
+
+#forest .info-date__cloud-two {
+  width: 1000px;
+  height: 1000px;
+  object-fit: contain;
+  position: absolute;
+  top: -250px;
+  right: -700px;
+  z-index: -1;
+}
+
+#forest .info-date__island {
+  height: 650px;
+  object-fit: contain;
+  position: absolute;
+  bottom: -200px;
+  left: -150px;
+  z-index: -1;
+}
+
+#forest .info-date__invitation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 53%;
+}
+
+#forest .info-date__who {
+  width: 550px;
+  object-fit: contain;
+  margin: 100px 0 40px;
+}
+
+#forest .info-date__text {
+  font-size: 40px;
+  line-height: 50px;
+  margin: 30px 0 0;
+}
+
+#forest .info-date__our-wedding {
+  width: 450px;
+  object-fit: contain;
+  margin: 70px 0 40px;
+}
+  #forest .info-place__text {
+        font-size: 30px;
+        line-height: 36px;
+        margin: 10px 0 0;
+    }
+#forest .info-date__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0 0;
+}
+
+#forest .info-date__day {
+  font-size: 150px;
+  line-height: 150px;
+  margin: 50px 0 30px;
+}
+
+#forest .info-date__place {
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#forest .info-date__check-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+
+#forest .info-date__where {
+  height: 110px;
+  object-fit: contain;
+}
+
+#forest .info-date__map {
+  margin: 25px 0 100px;
+  border: 1px solid #305d41;
+  box-sizing: border-box;
+  height: 352px;
+  z-index: 3;
+}
+
+#forest .info-date__our-wedding-text-title {
+     min-width: 550px;
+    width: 50vh;
+    margin: 30px 0 20px;
+    font-family: var(--beauty-font);
+    font-size: 120px;
+    line-height: 50px;
+    margin: 50px 0 30px 0
+  }
+
+@media screen and (max-width: 1700px) {
+ #forest  .info-date__cloud {
+    width: 700px;
+    height: 700px;
+    top: -100px;
+    left: -300px;
+  }
+  
+ #forest  .info-date__cloud-two {
+    width: 700px;
+    height: 700px;
+    top: -250px;
+    right: -300px;
+  }
+  
+ #forest .info-date__island {
+    height: 350px;
+    bottom: -50px;
+    left: -345px;
+  }
+  
+ #forest .info-date__who {
+    width: 350px;
+    margin: 70px 0 30px;
+  }
+  
+ #forest .info-date__text {
+    font-size: 30px;
+    line-height: 35px;
+    margin: 30px 0 0;
+  }
+  
+  #forest .info-date__our-wedding {
+    width: 300px;
+    margin: 40px 0 20px;
+  }
+  
+  #forest .info-date__info {
+    margin: 30px 0 0;
+  }
+  
+#forest  .info-date__day {
+    font-size: 100px;
+    line-height: 100px;
+    margin: 30px 0 10px;
+  }
+  
+#forest  .info-date__place {
+    padding-top: 80px;
+  }
+  
+#forest  .info-date__where {
+    height: 80px;
+  }
+  
+#forest  .info-date__map {
+    margin: 5px 0 70px;
+  }
+}
+#forest #music-block{
+    padding-bottom: 40px;
+}
+@media screen and (max-width: 1300px) {
+ #forest .info-date__background {
+    max-height: 800px;
+  }
+
+ #forest .info-date__cloud {
+    width: 600px;
+    height: 600px;
+    top: 0;
+    left: -350px;
+  }
+
+ #forest .info-date__cloud-two {
+    width: 600px;
+    height: 600px;
+    top: -150px;
+    right: -300px;
+  }
+
+#forest  .info-date__island {
+    height: 400px;
+    bottom: 0;
+    left: -150px;
+  }
+
+  #forest .info-date__invitation {
+    width: 55%;
+  }
+
+  #forest .info-date__who {
+    width: 350px;
+    margin: 80px 0 20px;
+  }
+
+ #forest .info-date__text {
+    font-size: 26px;
+    line-height: 30px;
+    margin: 20px 0 0;
+  }
+
+ #forest .info-date__our-wedding {
+   min-width: 350px;
+           width: 40vh;
+    margin: 30px 0 20px;
+    font-family: var(--beauty-font);
+    font-size: 140px;
+    line-height: 50px;
+    margin: 50px 0 50px 0;
+  }
+
+  #forest .info-date__info {
+    margin: 30px 0 0;
+  }
+
+  #forest .info-date__day {
+    font-size: 80px;
+    line-height: 80px;
+    margin: 20px 0 15px;
+  }
+
+ #forest .info-date__place {
+    padding-top: 80px;
+  }
+
+ #forest .info-date__where {
+    height: 70px;
+  }
+
+ #forest .info-date__map {
+    margin: 25px 0 70px;
+    padding: 0;
+    height: 302px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+ #forest .info-date__background {
+    max-height: 500px;
+  }
+  #forest .title__title, #forest .dresscode__title, #forest .timer-title {
+    font-size: 100px;
+    padding-bottom: 0px;
+        line-height: 60%;
+}
+  #forest .header__info_names {
+    font-family: var(--beauty-font);
+    font-size: 150px;
+    padding-bottom: 30px;
+    line-height: 100px;
+}
+
+     #forest   .timetable__line-start {
+            width: 115px;
+        }
+      #forest   .timetable__line-end {
+            width: 115px;
+        }
+ #forest .info-date__cloud {
+    width: 300px;
+    height: 300px;
+    left: -50px;
+  }
+  #forest .header__desctop {
+    margin: 10vh 0 0 0;
+}
+#forest .info-date__our-wedding-text-font-beauty{
+    font-size: 100px;
+}
+   #forest .info-date__text {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 10px 0 0;
+    }
+
+#forest .info-date__who-title {
+    font-size: 100px;
+    line-height: 50px;
+    margin: 20px 0 50px 0;
+}
+
+ #forest .info-date__cloud-two {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    right: -100px;
+  }
+
+ #forest .info-date__island {
+    height: 200px;
+    bottom: 0;
+    left: -100px;
+  }
+
+ #forest .info-date__invitation {
+    width: 70%;
+  }
+
+#forest  .info-date__who {
+    width: 250px;
+    margin: 35px 0 20px;
+  }
+
+ #forest .info-date__text {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 10px 0 0;
+  }
+
+ #forest .info-date__our-wedding {
+    width: 170px;
+    margin: 20px 0 10px;
+  }
+
+ #forest .info-date__info {
+    margin: 20px 0 0;
+  }
+
+ #forest .info-date__day {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 15px 0 10px;
+  }
+
+ #forest .info-date__place {
+    padding-top: 60px;
+  }
+
+ #forest .info-date__where {
+    height: 50px;
+  }
+
+ #forest .info-date__map {
+    margin: 25px 0 50px;
+    height: 242px;
+  }
+ #forest .info-date__our-wedding-text-title {
+   
+    font-size: 80px;
+    line-height: 50px;
+}
+#forest .info-place__text {
+   font-size: 24px;
+    line-height: 24px;
+    margin: 5px 0 0;
+}
+
+}
+
+
+#forest .timetable {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 150px;
+  position: relative;
+}
+
+#forest .timetable__header {
+  height: 140px;
+  object-fit: contain;
+}
+
+#forest .timetable__block {
+  display: grid;
+  grid-template-columns: repeat(7, 150px);
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas:
+    "rings text-foto glasses text-plate cake text-music car"
+    "line-rings line-foto line-glasses line-plate line-cake line-music line-car"
+    "text-rings foto text-glasses plate text-cake music text-car";
+  margin-top: 130px;
+  align-items: center;
+  justify-items: center;
+  column-gap: 0;
+  row-gap: 15px;
+}
+
+#forest .timetable__pic {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+#forest .timetable__pic_visual_rings {
+  grid-area: rings;
+}
+
+#forest .timetable__pic_visual_foto {
+  grid-area: foto;
+}
+
+#forest .timetable__pic_visual_welcome {
+  grid-area: welcome;
+}
+#forest .timetable__pic_visual_glasses {
+  grid-area: glasses;
+}
+
+#forest .timetable__pic_visual_plate {
+  grid-area: plate;
+}
+
+#forest .timetable__pic_visual_cake {
+  grid-area: cake;
+}
+
+#forest .timetable__pic_visual_music {
+  grid-area: music;
+}
+#forest .timetable__pic_visual_fireworks {
+  grid-area: fireworks;
+}
+
+#forest .timetable__pic_visual_car {
+  grid-area: car;
+}
+
+#forest .timetable__line {
+  width: 151px;
+  object-fit: contain;
+}
+
+#forest .timetable__line-start {
+  grid-area: line-rings;
+  object-fit: contain;
+  width: 84px;
+  object-position: right;
+  justify-self: flex-end;
+}
+
+#forest .timetable__line-end {
+  grid-area: line-car;
+  object-fit: contain;
+  width: 95px;
+  object-position: left;
+  justify-self: flex-start;
+}
+
+#forest .timetable__line_center_foto {
+  grid-area: line-foto;
+}
+
+#forest .timetable__line_center_glasses {
+  grid-area: line-glasses;
+}
+#forest .timetable__line_center_welcome {
+  grid-area: line-welcome;
+}
+
+#forest .timetable__line_center_plate {
+  grid-area: line-plate;
+}
+
+#forest .timetable__line_center_cake {
+  grid-area: line-cake;
+}
+
+#forest .timetable__line_center_music {
+  grid-area: line-music;
+}
+
+#forest .timetable__text {
+  font-size: 24px;
+  line-height: 20px;
+  margin: 0;
+}
+
+#forest .timetable__text_about_rings {
+  grid-area: text-rings;
+}
+
+#forest .timetable__text_about_foto {
+  grid-area: text-foto;
+}
+
+#forest .timetable__text_about_glasses {
+  grid-area: text-glasses;
+}
+#forest .timetable__text_about_welcome {
+  grid-area: text-welcome;
+}
+
+#forest .timetable__text_about_plate {
+  grid-area: text-plate;
+}
+
+#forest .timetable__text_about_cake {
+  grid-area: text-cake;
+}
+
+#forest .timetable__text_about_music {
+  grid-area: text-music;
+}
+
+#forest .timetable__text_about_car {
+  grid-area: text-car;
+}
+
+@media screen and (max-width: 1700px) {
+ #forest .timetable {
+    padding-top: 50px;
+  }
+
+ #forest .timetable__header {
+    height: 100px;
+  }
+
+ #forest .timetable__block {
+    margin-top: 70px;
+}
+
+#forest  .timetable__pic {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #forest .timetable {
+    padding-top: 80px;
+  }
+
+  #forest .timetable__header {
+    height: 80px;
+  }
+
+ #forest .timetable__block {
+    grid-template-columns: repeat(7, 100px);
+    margin-top: 40px;
+  }
+
+ #forest .timetable__pic {
+    width: 70px;
+    height: 70px;
+  }
+
+ #forest .timetable__line {
+    width: 101px;
+  }
+
+ #forest .timetable__line-start {
+    height: 11.4px;
+    object-position: right;
+  }
+
+ #forest .timetable__line-end {
+    height: 11.4px;
+    object-position: left;
+  }
+
+ #forest .timetable__text {
+    font-size: 22px;
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+ #forest .timetable__header {
+    height: 70px;
+  }
+
+ #forest .timetable {
+    padding-top: 50px;
+  }
+
+ #forest .timetable__text {
+    width: 120px;
+    font-size: 18px;
+  }
+
+ #forest .timetable__block {
+    grid-template-rows: repeat(7, 99px);
+    grid-template-columns: 1fr 30px 1fr;
+    grid-template-areas:
+      "rings line-rings text-rings"
+      "text-foto line-foto foto"
+      "glasses line-glasses text-glasses"
+      "text-plate line-plate plate"
+      "cake line-cake text-cake"
+      "text-music line-music music"
+      "car line-car text-car";
+    margin-top: 30px;
+    column-gap: 15px;
+    row-gap: 0;
+  }
+
+ #forest .timetable__line {
+    transform: rotate(90deg);
+    width: 115px;
+    justify-content: center;
+    align-items: center;
+  }
+
+ #forest   .timetable__line-start {
+    height: 13px;
+    padding-right: 45px;
+    transform: rotate(90deg);
+    justify-self: center;
+    align-self: flex-end;
+    width: 115px;
+  }
+
+#forest  .timetable__line-end {
+    height: 13px;
+    padding-left: 45px;
+    transform: rotate(90deg);
+    justify-self: center;
+    width: 115px;
+    align-self: flex-start;
+  }
+}
+
+
+
+#forest .dresscode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+        padding-bottom: 20px;
+  position: relative;
+}
+
+#forest .dresscode__header {
+  height: auto;
+  object-fit: contain;
+}
+
+#forest .dresscode__description {
+  font-size: 30px;
+  line-height: 37px;
+  width: 40%;
+  margin: 0px 0 0;
+}
+
+#forest .dresscode__cloud {
+  width: 1200px;
+  height: 1000px;
+  object-fit: contain;
+  position: absolute;
+  top: -350px;
+  left: 0;
+  z-index: -1;
+}
+
+#forest .dresscode__birds {
+  width: 1800px;
+  object-fit: contain;
+  position: absolute;
+  top: 200px;
+  left: 350px;
+  z-index: -1;
+}
+
+#forest .dresscode__colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 0;
+  min-width: 25%;
+  gap: 15px;
+}
+
+#forest .dresscode__color {
+  max-width: 72px;
+    max-height: 72px;
+  border-radius: 50%;
+  border: 1px solid rgba(53, 53, 53, 0.259);
+}
+
+#forest .dresscode__color_var_one {
+  background-color: #2f5907;
+}
+
+#forest .dresscode__color_var_two {
+  background-color: #e0b8c7;
+}
+
+#forest .dresscode__color_var_three {
+  background-color: #fcf3ed;
+}
+
+#forest .dresscode__color_var_four {
+  background-color: #a3a3a3;
+}
+
+#forest .dresscode__color_var_five {
+  background-color: #69725b;
+}
+
+@media screen and (max-width: 1700px) {
+ #forest .dresscode {
+    padding-top: 0px;
+        padding-bottom: 20px;
+  }
+   #forest .timetable__text {
+        font-size: 24px;
+    }
+    
+ #forest .dresscode__description {
+    font-size: 30px;
+    width: 50%;
+  }
+
+  #forest .dresscode__header {
+   
+  }
+  
+ #forest .dresscode__cloud {
+    width: 900px;
+    height: 1000px;
+    top: -400px;
+  }
+  
+#forest  .dresscode__birds {
+    width: 1000px;
+    top: 200px;
+    left: 250px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+ #forest .dresscode {
+    padding-top: 60px;
+  }
+
+#forest  .dresscode__header {
+    
+  }
+
+ #forest .dresscode__description {
+    font-size: 24px;
+    line-height: 24px;
+    width: 40%;
+  }
+
+ #forest .dresscode__colors {
+    margin: 30px 0 0;
+    gap: 20px;
+  }
+
+ #forest .dresscode__color {
+    max-width: 55px;
+    max-height: 55px;
+  }
+
+ #forest .dresscode__cloud {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+  }
+
+ #forest .dresscode__birds {
+    width: 800px;
+    top: 200px;
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+ #forest .dresscode {
+    padding-top: 40px;
+  }
+
+ #forest .dresscode__header {
+   
+  }
+
+ #forest .dresscode__cloud {
+    width: 400px;
+    height: 300px;
+    top: -150px;
+    left: 0;
+  }
+
+ #forest .dresscode__description {
+   font-size: 24px;
+        line-height: 100%;
+    width: 80%;
+    margin: 30px 0 0;
+  }
+
+ #forest .dresscode__colors {
+    margin: 30px 0 0;
+    gap: 5px;
+  }
+
+ #forest .dresscode__color {
+    max-width: 37px;
+    max-height: 37px;
+  }
+  
+ #forest .dresscode__birds {
+    display: none;
+  }
+}
+#forest .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ padding: 100px 0 100px 0;
+  position: relative;
+}
+
+#forest .details__header {
+  height: 100px;
+  object-fit: contain;
+}
+
+#forest .details__cloud {
+  width: 1200px;
+  height: 1200px;
+  object-fit: contain;
+  position: absolute;
+  bottom: -500px;
+  right: 100px;
+  z-index: -2;
+}
+
+#forest .details__text {
+  font-size: 30px;
+  line-height: 37px;
+  width: 50%;
+  margin: 0px auto 50px auto;
+}
+
+@media screen and (max-width: 1700px) {
+#forest  .details {
+   padding: 80px 0 80px 0;
+  }
+
+ #forest#forest .details__header {
+    height: 90px;
+  }
+
+ #forest .details__cloud {
+    width: 1000px;
+    height: 1000px;
+    bottom: -500px;
+    right: -100px;
+  }
+
+ #forest .details__text {
+    font-size: 28px;
+    line-height: 30px;
+    width: 65%;
+    margin: 0px auto 40px auto;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  #forest .details {
+    padding: 60px 0 0;
+  }
+  
+ #forest .details__header {
+    height: 60px;
+  }
+  
+ #forest#forest  .details__cloud {
+    width: 650px;
+    height: 600px;
+    bottom: -300px;
+    right: -100px;
+  }
+  
+ #forest  .details__text {
+    font-size: 24px;
+        line-height: 24px;
+        width: 60%;
+        margin: 30px auto 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #forest .details {
+    padding: 40px 0 0;
+  }
+
+  #forest .details__header {
+    height: 50px;
+  }
+
+#forest  .details__cloud {
+    width: 450px;
+    height: 400px;
+    bottom: 000px;
+    right: -200px;
+  }
+
+  #forest .details__text {
+        font-size: 24px;
+        line-height: 100%;
+        width: 60%;
+        margin: 30px auto 0;
+       margin: 25px auto 30px;
+        margin: 15px auto;
+        width: 80%;
+    }
+}
+
+#forest .timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 0;
+  position: relative;
+}
+
+#forest .timer__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#forest .timer__title {
+  font-size: 30px;
+  line-height: 37px;
+}
+
+#forest .timer__bloks {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  justify-content: space-between;
+  padding: 60px 0;
+  max-width: 70%;
+}
+
+#forest .timer__block-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 105px;
+}
+
+#forest .timer__number {
+  font-size: 32px;
+  color: #f7ebdf;
+  width: 72px;
+  height: 72px;
+  margin: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+}
+
+#forest .timer__number_var_day {
+  background-color: #799970;
+}
+
+#forest .timer__number_var_hour {
+background-color: #87aaa1;
+}
+
+#forest .timer__number_var_min {
+background-color: #808c8e;
+}
+
+#forest .timer__number_var_sec {
+background-color: #455445;
+}
+
+#forest .timer__text {
+  font-size: 30px;
+  margin: 10px 0 0;
+}
+
+@media screen and (max-width: 1700px) {
+ #forest#forest  .timer {
+    padding: 80px 0 0;
+  }
+  
+ #forest .timer__title {
+    font-size: 24px;
+    line-height: 27px;
+  }
+  
+ #forest .timer__number {
+    font-size: 28px;
+  }
+
+ #forest .timer__text {
+    font-size: 24px;
+    margin: 7px 0 0;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+#forest  .timer {
+    padding: 60px 0 0;
+  }
+
+#forest  .timer__title {
+    font-size: 20px;
+  }
+
+#forest  .timer__text {
+    font-size: 18px;
+  }
+
+ #forest .timer__number {
+    font-size: 20px;
+    width: 60px;
+    height: 60px;
+  }
+
+#forest  .timer__bloks {
+    gap: 7px;
+  }
+
+ #forest .timer__block-info {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+ #forest .timer {
+    padding: 40px 0 0;
+  }
+
+#forest  .timer__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+ #forest .timer__bloks {
+    gap: 7px;
+    padding: 30px 0;
+  }
+
+ #forest .timer__number {
+    font-size: 28px;
+            width: 50px;
+        height: 50px;
+  }
+
+ #forest .timer__text {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+ #forest .timer__block-info {
+    width: 55px;
+  }
+}
+
+#forest .rsvp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 130px 0 0;
+  position: relative;
+}
+
+#forest .rsvp__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#forest .rsvp__header {
+  height: 100px;
+  object-fit: contain;
+}
+
+#forest .rsvp__cloud {
+  width: 1100px;
+  height: 1100px;
+  object-fit: contain;
+  position: absolute;
+  bottom: -250px;
+  left: 100px;
+  z-index: -1;
+}
+
+#forest .rsvp__text {
+  font-size: 30px;
+  line-height: 37px;
+  width: 60%;
+  margin: 30px 0 0;
+}
+
+#forest .rsvp__answer {
+  font-size: 20px;
+  line-height: 37px;
+  margin: 10px 0;
+}
+
+#forest .rsvp__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: 40%;
+  margin: 50px 0 0;
+}
+
+#forest .rsvp__string {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 30px;
+}
+
+#forest .rsvp__label {
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0 15px 0 0;
+  display: flex;
+  align-items: center;
+}
+
+#forest .rsvp__input {
+  width: 340px;
+  height: 55px;
+  border-radius: 3.5px;
+  border: .5px solid #264f26;
+  font-size: 20px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#forest .rsvp__buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  gap: 25px;
+  align-self: center;
+}
+
+#forest .rsvp__button {
+  width: 200px;
+  height: 50px;
+  
+    padding: 0px;
+  background-color: #264f26;
+  font-size: 22px;
+  border: none;
+  align-self: center;
+  border-radius: 3.5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 200;
+}
+
+#forest .rsvp__button:disabled {
+  opacity: .7;
+}
+#forest .error-rsvp{
+        margin: auto;
+    font-size: 28px;
+}
+#forest .rsvp-message{
+        
+    max-width: 600px;
+    font-size: 20px;
+        display: block;
+    line-height: 100%;
+    text-align: left;
+    width: 100%;
+}
+#forest #rsvp .rsvp-message{
+    text-align: center;
+    width: 90%;
+}
+
+@media screen and (max-width: 1700px) {
+ #forest .rsvp {
+    padding: 80px 0 0;
+  }
+
+#forest  .rsvp__header {
+    height: 80px;
+  }
+
+ #forest .rsvp__cloud {
+    width: 800px;
+    height: 800px;
+    bottom: -250px;
+    left: -100px;
+    z-index: -1;
+  }
+
+ #forest .rsvp__return {
+    font-size: 14px;
+    line-height: 33px;
+    padding: 0;
+  }
+
+  #forest .rsvp__answer {
+    font-size: 18px;
+    line-height: 33px;
+    margin: 7px 0;
+  }
+
+ #forest .rsvp__label {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+ #forest .rsvp__input {
+    font-size: 20px;
+    padding: 7px;
+  }
+#forest  .rsvp__button {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+ #forest .rsvp {
+    padding: 60px 0 0;
+  }
+#forest .error-rsvp{
+            font-size: 24px;
+}
+#forest  .rsvp__header {
+    height: 50px;
+  }
+
+ #forest .rsvp__cloud {
+    width: 600px;
+    height: 600px;
+    bottom: -100px;
+    left: -100px;
+  }
+
+ #forest .rsvp__text {
+    font-size: 20px;
+    line-height: 27px;
+    margin: 30px 0 0;
+  }
+
+#forest  .rsvp__return {
+    font-size: 10px;
+    line-height: 28px;
+  }
+
+ #forest .rsvp__answer {
+    font-size: 14px;
+    line-height: 28px;
+    margin: 15px 0 5px 0;
+  }
+
+ #forest .rsvp__form {
+    min-width: 40%;
+    margin: 30px 0 0;
+  }
+
+ #forest .rsvp__string {
+    margin: 0 0 25px;
+  }
+
+ #forest .rsvp__label {
+    font-size: 18px;
+  }
+
+  #forest .rsvp__input {
+    width: 300px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+#forest  .rsvp__buttons {
+    gap: 20px;
+  }
+
+#forest  .rsvp__button {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 42px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+ #forest .rsvp {
+    padding: 40px 0 0;
+  }
+  #forest .error-rsvp{
+        margin: auto;
+    font-size: 18px;
+}
+
+
+ #forest .rsvp__header {
+    height: 40px;
+  }
+
+ #forest .rsvp__cloud {
+    width: 400px;
+    height: 400px;
+    bottom: -70px;
+    left: -70px;
+  }
+
+ #forest .rsvp__text {
+           font-size: 24px;
+        line-height: 100%;
+    width: 80%;
+    margin: 20px 0 0;
+  }
+
+#forest  .rsvp__return {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+#forest  .rsvp__answer {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+#forest  .rsvp__form {
+    min-width: 40%;
+    margin: 20px 0 0;
+  }
+
+ #forest .rsvp__string {
+    margin: 0 0 15px;
+  }
+
+#forest  .rsvp__label {
+    font-size: 22px;
+        line-height: 100%;
+    margin: 0 10px 0 0;
+  }
+
+ #forest .rsvp__input {
+    width: 175px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  #forest .rsvp__buttons {
+    gap: 15px;
+  }
+
+  #forest .rsvp__button {
+    width: 130px;
+    height: 35px;
+    font-size: 16px;
+    line-height: normal;
+  }
+}
+
+#forest .question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#forest .question__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#forest .question__header {
+  height: 130px;
+  object-fit: contain;
+}
+
+#forest .question__cloud {
+  width: 1100px;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  right: -300px;
+  z-index: -1;
+}
+
+#forest .question__text {
+  font-size: 30px;
+  line-height: 37px;
+  margin: 30px 0 0;
+  width: 60%;
+}
+#forest .question__text-mini {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+#forest .question__text-span {
+  font-size: 20px;
+  line-height: 37px;
+  margin: 30px 0 0;
+}
+
+#forest .question__form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0;
+}
+
+#forest .question__string {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 20px;
+  border: none;
+  font-size: 30px;
+  
+        line-height: 30px;
+  align-items: flex-start;
+  padding: 0;
+}
+
+#forest .question__label {
+  margin: 20px 0 0 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+#forest .question__label-input {
+  margin: 0 0 10px 0;
+}
+
+
+
+
+#forest .question__input {
+  width: 550px;
+  height: 55px;
+  border-radius: 3.5px;
+  border: .5px solid #264f26;
+  font-size: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+#forest .question__button {
+  width: 300px;
+  height: 50px;
+  background-color: #264f26;
+  font-size: 24px;
+  border: none;
+  align-self: center;
+  border-radius: 3.5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 200;
+}
+
+#forest .question__button:disabled {
+  opacity: .7;
+}
+
+#forest .question__unvisible {
+  font-family: inherit;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(0 0 0 0);
+}
+
+#forest .question__visible-radio {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.645);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#forest .question__unvisible:checked + .question__visible-radio {
+  background-color: #264f26;
+}
+
+#forest .question__unvisible:disabled + .question__visible-radio {
+  border: 1px solid #264f26;
+  background-color: #fbf8ec;
+}
+
+#forest .question__unvisible:disabled:checked+ .question__visible-radio {
+  background-color: #fbf8ec;
+}
+
+#forest .question__unvisible:focus + .question__visible-radio {
+    box-shadow: 0 0 5px #f8f7f0;
+}
+
+#forest .question__visible-checkbox {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.645);
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#forest .question__unvisible:checked + .question__visible-checkbox {
+  background-color: #264f26;
+}
+
+#forest .question__unvisible:disabled + .question__visible-checkbox {
+  border: 1px solid #264f26;
+  background-color: #fbf8ec;
+}
+
+#forest .question__unvisible:disabled:checked+ .question__visible-checkbox {
+  background-color: #fbf8ec;
+}
+
+#forest .question__unvisible:focus + .question__visible-checkbox {
+  box-shadow: 0 0 5px #f8f7f0;
+}
+#forest .question__text-span {
+  font-size: 24px;
+  line-height: 37px;
+  margin: 0;
+}
+#forest .options{
+    margin: 0 0 5px;
+}
+@media screen and (max-width: 1700px) {
+#forest  .question {
+    padding: 80px 0 0;
+  }
+
+#forest  .question__header {
+    height: 110px;
+  }
+
+#forest  .question__cloud {
+    width: 1000px;
+    top: 0;
+    right: -400px;
+    z-index: -1;
+  }
+
+#forest  .question__text {
+    font-size: 28px;
+    line-height: 33px;
+  }
+#forest .question__text-mini {
+  font-size: 22px;
+  line-height: 22px;
+}
+ #forest .question__form {
+    margin: 20px 0 0;
+  }
+
+ #forest .question__text-span {
+    font-size: 20px;
+    line-height: 33px;
+  }
+
+ #forest .question__string {
+    margin: 0 0 20px;
+    font-size: 24px;
+    
+        line-height: 24px;
+  }
+
+ #forest .question__label {
+    margin: 0px 0 0 0;
+  }
+
+#forest  .question__label-input {
+    margin: 0 0 5px 0;
+  }
+
+#forest  .question__input {
+    padding: 7px;
+    width: 400px;
+    font-size: 24px;
+  }
+
+#forest  .question__button {
+    font-size: 28px;
+  }
+  #forest .options {
+    margin: 0 0 5px;
+}
+}
+
+@media screen and (max-width: 1300px) {
+ #forest .question {
+    padding: 60px 0 0;
+  }
+
+#forest  .question__header {
+    height: 60px;
+  }
+
+ #forest .question__cloud {
+    width: 650px;
+    top: 100px;
+    right: -300px;
+    z-index: -1;
+  }
+
+#forest  .question__text {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+#forest .question__text-mini {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+#forest  .question__text-span {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+#forest  .question__form {
+    margin: 10px 0 0;
+  }
+
+ #forest .question__string {
+    margin: 0 0 10px;
+    font-size: 20px;
+    
+        line-height: 20px;
+    
+    padding: 0;
+  }
+
+#forest  .question__label {
+    margin: 10px 0 0;
+  }
+
+ #forest .question__label-input {
+    margin: 0 0 5px 0;
+    text-align: left;
+  }
+
+ #forest .question__button {
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+#forest  .question__input {
+    font-size: 24px;
+    height: 45px;
+    width: 300px;
+  }
+  #forest .options {
+    margin: 0 0 5px;
+}
+}
+
+@media screen and (max-width: 800px) {
+#forest  .question {
+    padding: 40px 0 0;
+  }
+
+#forest  .question__header {
+    height: 60px;
+  }
+
+#forest  .question__cloud {
+    width: 450px;
+    top: 100px;
+    right: -250px;
+    z-index: -1;
+  }
+
+#forest  .question__text {
+     font-size: 24px;
+        line-height: 100%;
+    width: 80%;
+    margin: 20px 0 0;
+  }
+#forest .question__text-mini {
+  font-size: 20px;
+  line-height: 100%;
+}
+  #forest .question__text-span {
+           font-size: 22px;
+        line-height: 100%;
+  }
+
+  #forest .question__visible-radio {
+    width: 10px;
+    height: 10px;
+  }
+
+  #forest .question__visible-checkbox {
+    width: 10px;
+    height: 10px;
+  }
+#forest .options label{
+        margin: 0;
+}
+  #forest .question__form {
+    margin: 10px 0 0;
+  }
+
+  #forest .question__string {
+    margin: 0 0 20px;
+            font-size: 24px;
+        line-height: 100%;
+      
+  }
+
+  #forest .question__label {
+    margin: 10px 0 0;
+  }
+
+  #forest .question__input {
+    height: 45px;
+    font-size: 16px;
+    min-width: 250px;
+    width: 100%;
+  }
+
+ #forest .question__button {
+    width: 155px;
+    height: 40px;
+    font-size: 16px;
+  }
+  #forest .options {
+    margin: 0 0 5px;
+}
+}
+
+
+#forest .footer {
+    gap: 50px;
+    height: 900px;
+    margin: 100px 0 0;
+    position: relative
+}
+
+#forest .footer, #forest .footer__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: start
+}
+
+#forest .footer__container {
+    margin: 0;
+    width: 700px
+}
+
+#forest .footer__background {
+    height: calc(100% + 400px);
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: -400px;
+    width: 100%;
+    z-index: -1
+}
+
+#forest .footer__text {
+    font-size: 30px;
+    margin: 0px 0 0
+}
+
+#forest .footer__names {
+    height: 200px;
+    margin: 30px 0 0;
+    object-fit: contain;
+    
+}
+
+@media screen and (max-width: 1700px) {
+ #forest   .footer {
+        height:600px;
+        margin: 100px 0 0
+    }
+
+ #forest   .footer__background {
+        height: calc(100% + 300px);
+        left: 0;
+        top: -300px;
+        width: 100%
+    }
+
+  #forest  .footer__text {
+        font-size: 24px;
+        margin: 0px 0 0
+    }
+
+  #forest  .footer__names {
+        height: 160px;
+        margin: 20px 0 0;
+        font-size: 160px;
+    padding-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+   #forest .footer {
+        gap:20px;
+        height: 400px;
+        margin: 50px 0 0
+    }
+
+  #forest  .footer__background {
+                height: calc(100% + 200px);
+        top: -150px;
+    }
+    #forest .footer__name {
+    font-family: var(--beauty-font);
+    font-size: 100px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+   #forest .footer__text {
+        font-size: 20px;
+        margin: 0px 0 0
+    }
+
+   #forest .footer__names {
+        height: 120px;
+        margin: 0px 0 0;
+        font-size: 120px;
+    padding-bottom: 15px;
+    }
+}
+
+#forest #music-text {
+       font-size: 24px;
+}
+  #forest  #playButton {
+    width: 20%;
+    max-width: 100px;
+    margin: auto;
+}
+#forest .date-calendar table{
+    font-size: 24px;
+}
+#forest .date-calendar {
+   padding-top: 50px;
+}
+#forest .date-calendar h3{
+    font-size: 84px;
+    font-family: var(--beauty-font);
+}
+#forest  tbody, #forest  td, #forest tfoot, #forest  th, #forest  thead, #forest  tr {
+    padding: 0px 10px;
+}
+    --swiper-theme-color: #007aff;
+    --swiper-navigation-size: 44px;
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-black: #000;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-gray-100: #f8f9fa;
+    --bs-gray-200: #e9ecef;
+    --bs-gray-300: #dee2e6;
+    --bs-gray-400: #ced4da;
+    --bs-gray-500: #adb5bd;
+    --bs-gray-600: #6c757d;
+    --bs-gray-700: #495057;
+    --bs-gray-800: #343a40;
+    --bs-gray-900: #212529;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-primary-rgb: 13,110,253;
+    --bs-secondary-rgb: 108,117,125;
+    --bs-success-rgb: 25,135,84;
+    --bs-info-rgb: 13,202,240;
+    --bs-warning-rgb: 255,193,7;
+    --bs-danger-rgb: 220,53,69;
+    --bs-light-rgb: 248,249,250;
+    --bs-dark-rgb: 33,37,41;
+    --bs-white-rgb: 255,255,255;
+    --bs-black-rgb: 0,0,0;
+    --bs-body-color-rgb: 33,37,41;
+    --bs-body-bg-rgb: 255,255,255;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --bs-body-bg: #fff;
+    --bs-border-width: 1px;
+    --bs-border-style: solid;
+    --bs-border-color: #dee2e6;
+    --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+    --bs-border-radius: 0.375rem;
+    --bs-border-radius-sm: 0.25rem;
+    --bs-border-radius-lg: 0.5rem;
+    --bs-border-radius-xl: 1rem;
+    --bs-border-radius-2xl: 2rem;
+    --bs-border-radius-pill: 50rem;
+    --bs-link-color: #0d6efd;
+    --bs-link-hover-color: #0a58ca;
+    --bs-code-color: #d63384;
+    --bs-highlight-bg: #fff3cd;
+    --hue: 214;
+    --template-bg-light: #f0f4fb;
+    --template-text-dark: #495057;
+    --template-text-light: #fff;
+    --template-link-color: #2a69b8;
+    --template-special-color: #001b4c;
+    --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-classic: "Font Awesome 6 Free";
+    --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+    --fa-style-family-brands: "Font Awesome 6 Brands";
+    --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+    --header_height: $header_height_sm;
+    font-weight: var(--bs-body-font-weight);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    --button-color: #393738;
+    --text-light-color: #e7e2db;
+    --elements-color1: #f5dbe2;
+    --elements-color2: #a1a0a0;
+    --bs-gutter-y: 0;
+    --bs-gutter-x: 1.875rem;
+    --background-color: #e0e0e0;
+    --header-color: #db0f0f;
+    --text-color: #000000;
+    --main-font: 'CYGRE-THIN', sans-serif;
+    --beauty-font: 'WonderScript', sans-serif;
+    --secondary-font: 'Hagin', sans-serif;
+    font-family: var(--main-font);
+    pointer-events: auto;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 100%;
+    color: var(--text-color);
+    background: url(/images/sites/soul/empty-heart.svg) center center no-repeat;
+    background-position: center center;
+    border: 0px;
+    padding: 25px;
+    height: auto;
+@media screen and (max-width: 800px) {
+#forest .footer {
+        gap:10px;
+        height: 350px;
+        margin: 50px 0 0
+    }
+
+    #forest .footer__background {
+        height: calc(100% + 250px);
+        top: -150px
+    }
+
+   #forest .footer__text {
+                font-size: 24px;
+        line-height: 100%;
+        margin: 0
+    }
+
+   #forest .footer__names {
+        height: 110px;
+        margin: 10px 0 0;
+        font-size: 80px;
+    padding-bottom: 10px;
+    }
+}
+
+#forest .info-date {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#forest .info-date__background {
+    height: calc(100vh + 200px);
+    left: 0;
+    max-height: 1100px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1
+}
+
+#forest  .info-date__cloud {
+    left: -750px;
+    top: 0
+}
+
+#forest .info-date__cloud, #forest .info-date__cloud-two {
+    height: 1000px;
+    object-fit: contain;
+    position: absolute;
+    width: 1000px;
+    z-index: -1
+}
+
+#forest .info-date__cloud-two {
+    right: -700px;
+    top: -250px
+}
+
+#forest .info-date__island {
+    bottom: -200px;
+    height: 650px;
+    left: -150px;
+    object-fit: contain;
+    position: absolute;
+    z-index: -1
+}
+
+#forest .info-date__invitation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 53%
+}
+
+#forest .info-date__who {
+    margin: 100px 0 40px;
+    object-fit: contain;
+    width: 550px
+}
+
+#forest .info-date__text {
+    font-size: 40px;
+    line-height: 50px;
+    margin: 30px 0 0
+}
+
+#forest .info-date__our-wedding {
+    margin: 70px 0 40px;
+    object-fit: contain;
+    width: 450px
+}
+
+#forest .info-date__info {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0
+}
+
+#forest .info-date__day {
+    font-size: 150px;
+    line-height: 150px;
+    margin: 50px 0 30px
+}
+
+#forest .info-date__place {
+    padding-top: 150px
+}
+
+#forest .info-date__check-in, #forest .info-date__place {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+#forest .info-date__check-in {
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+    width: 90vw;
+}
+
+#forest .info-date__where {
+    height: 110px;
+    object-fit: contain
+}
+
+#forest .info-date__map {
+    border: 1px solid #305d41;
+    box-sizing: border-box;
+    height: 352px;
+    margin: 25px 0 100px;
+    z-index: 3
+}
+#forest iframe{
+       width: 800px;
+    height: 350px;
+   }
+@media screen and (max-width: 1700px) {
+    #forest .info-date__cloud {
+        height:700px;
+        left: -300px;
+        top: -100px;
+        width: 700px
+    }
+
+   #forest .info-date__cloud-two {
+        height: 700px;
+        right: -300px;
+        top: -250px;
+        width: 700px
+    }
+
+    #forest .info-date__island {
+        bottom: -50px;
+        height: 350px;
+        left: -145px
+    }
+
+   #forest .info-date__who {
+        margin: 70px 0 30px;
+        width: 350px
+    }
+
+   #forest .info-date__text {
+        font-size: 30px;
+        line-height: 35px;
+        margin: 30px 0 0
+    }
+
+#forest    .info-date__our-wedding {
+        margin: 40px 0 20px;
+        width: 300px
+    }
+
+   #forest .info-date__info {
+        margin: 30px 0 0
+    }
+
+   #forest .info-date__day {
+        font-size: 100px;
+        line-height: 100px;
+        margin: 30px 0 10px
+    }
+
+  #forest  .info-date__place {
+        padding-top: 80px
+    }
+
+  #forest  .info-date__where {
+        height: 80px
+    }
+
+  #forest  .info-date__map {
+        margin: 5px 0 70px
+    }
+}
+
+@media screen and (max-width: 1300px) {
+  #forest  .info-date__background {
+        max-height:800px
+    }
+
+  #forest  .info-date__cloud {
+        height: 600px;
+        left: -350px;
+        top: 0;
+        width: 600px
+    }
+
+   #forest .info-date__cloud-two {
+        height: 600px;
+        right: -300px;
+        top: -150px;
+        width: 600px
+    }
+
+  #forest  .info-date__island {
+        bottom: 0;
+        height: 400px;
+        left: -150px
+    }
+
+  #forest  .info-date__invitation {
+        width: 55%
+    }
+
+   #forest .info-date__who {
+        margin: 80px 0 20px;
+        width: 350px
+    }
+
+   #forest .info-date__text {
+        font-size: 24px;
+        line-height: 30px;
+        margin: 20px 0 0
+    }
+
+   #forest .info-date__our-wedding {
+        margin: 30px 0 20px;
+        width: 250px
+    }
+
+   #forest .info-date__info {
+        margin: 30px 0 0
+    }
+
+  #forest  .info-date__day {
+        font-size: 80px;
+        line-height: 80px;
+        margin: 20px 0 15px
+    }
+
+  #forest  .info-date__place {
+        padding-top: 80px
+    }
+
+   #forest .info-date__where {
+        height: 70px
+    }
+
+  #forest  .info-date__map {
+        height: 302px;
+        margin: 25px 0 70px;
+        padding: 0
+    }
+    #forest iframe{
+       width: 600px;
+    height: 300px;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   #forest iframe{
+       width: 320px;
+    height: 240px;
+   }
+   #forest .info-date__background {
+        max-height:500px
+    }
+
+   #forest .info-date__cloud {
+        height: 300px;
+        left: -50px;
+        width: 300px
+    }
+
+   #forest .info-date__cloud-two {
+        height: 300px;
+        right: -100px;
+        top: -50px;
+        width: 300px
+    }
+
+   #forest .info-date__island {
+        bottom: 0;
+        height: 200px;
+        left: -100px
+    }
+
+   #forest .info-date__invitation {
+        width: 85%
+    }
+
+   #forest .info-date__who {
+        margin: 35px 0 20px;
+        width: 250px
+    }
+
+  #forest  .info-date__text {
+       font-size: 24px;
+        line-height: 100%;
+                margin: 20px 0;
+        margin: 10px 0 0;
+                text-align: center;
+    }
+
+   #forest .info-date__our-wedding {
+        margin: 20px 0 10px;
+        width: 170px
+    }
+
+  #forest  .info-date__info {
+        margin: 20px 0 0
+    }
+
+  #forest  .info-date__day {
+        font-size: 60px;
+        line-height: 60px;
+        margin: 15px 0 10px
+    }
+
+  #forest  .info-date__place {
+        padding-top: 60px
+    }
+
+  #forest  .info-date__where {
+        height: 50px
+    }
+
+  #forest  .info-date__map {
+        height: 242px;
+        margin: 25px 0 50px
+    }
+}
+
+
+
+ 
+    /*  Пример класса для текстовых элементов, появляющихся справа */
+#forest .animate-from-right {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: translateX(50px); /* Сдвигаем вправо */
+}
+
+#forest .animate-from-right.aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*  Пример класса для элементов, появляющихся снизу */
+#forest .animate-from-bottom {
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(50px); /* Сдвигаем вниз */
+}
+
+#forest .animate-from-bottom.aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#forest .swing {
+  animation: swingAnimation 5s linear infinite alternate;
+}
+
+
+
+/* Дополнительные анимации (примеры) */
+#forest .fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+    opacity: 0; /* Скрываем элемент изначально */
+}
+
+
+
+#forest .slide-up {
+    animation: slideUp 1s ease-out forwards;
+    transform: translateY(50px); /* Сдвигаем элемент вниз изначально */
+    opacity: 0;
+}
+
+
+
+#forest .slide-down {
+    animation: slideDown 1s ease-out forwards;
+    transform: translateY(-50px); /* Сдвигаем элемент вверх изначально */
+    opacity: 0;
+}
+#forest .pulse {
+  animation: pulse 3s linear infinite; /* 3 секунды, линейно, бесконечно */
+}
+#forest .pulse-slow {
+  animation: pulse-slow 7s linear infinite; /* 3 секунды, линейно, бесконечно */
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes swingAnimation {
+  0% {
+    transform: rotate(-15deg); /* Наклон влево */
+  }
+  100% {
+    transform: rotate(15deg); /* Наклон вправо */
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.95); /* Исходный размер */
+  }
+  50% {
+    transform: scale(1.15); /* Увеличение на 5% */
+  }
+  100% {
+    transform: scale(0.85); /* Возврат к исходному размеру */
+  }
+}
+@keyframes pulse-slow {
+  0% {
+    transform: scale(0.95); /* Исходный размер */
+  }
+  50% {
+    transform: scale(1.05); /* Увеличение на 5% */
+  }
+  100% {
+    transform: scale(0.95); /* Возврат к исходному размеру */
+  }
+}
+
+@media screen and (max-width: 850px) and (orientation: portrait) {
+    #forest .timetable__line {
+        transform: rotate(90deg);
+        width: 115px;
+        justify-content: center;
+        align-items: center;
+        max-width: none;
+    }
+        #forest .timetable__line-start {
+        height: 13px;
+        padding-right: 45px;
+        transform: rotate(90deg);
+        justify-self: center;
+        align-self: flex-end;
+        max-width: none;
+    }
+    #forest .timetable__line-end {
+        height: 13px;
+        padding-left: 45px;
+        transform: rotate(90deg);
+        justify-self: center;
+        align-self: flex-start;
+        max-width: none;
+    }
+}
+#forest  form#question{
+        width: 90%;
+    margin: auto;
+    max-width: 600px;
+}
