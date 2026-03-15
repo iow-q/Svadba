@@ -371,21 +371,21 @@
 	</div>
 	<script>
 window.sendToTelegram = async function(button) {
-    if (!button) {
-        console.error('Кнопка не передана');
-        return false;
-    }
+    // Защита от дурака
+    if (!button) return false;
     
+    // Блокируем кнопку
     button.disabled = true;
     const originalText = button.innerText;
     button.innerText = '⏳ Отправка...';
     
     try {
+        // Получаем данные
         const nameInput = document.querySelector('input[name="Имя и фамилия"]');
         const name = nameInput?.value.trim();
         
         if (!name) {
-            alert('Введите имя');
+            alert('Пожалуйста, введите имя');
             button.disabled = false;
             button.innerText = originalText;
             return false;
@@ -394,6 +394,7 @@ window.sendToTelegram = async function(button) {
         const wantToSpeak = document.getElementById('plusOne')?.checked ? 'Да' : 'Нет';
         const decision = originalText;
         
+        // Отправка в Telegram
         const message = `🔔 Новый ответ!\n👤 Имя: ${name}\n🎤 Сказать слово: ${wantToSpeak}\n📌 Решение: ${decision}`;
         const botToken = '8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw';
         const chatId = '7126119080';
@@ -407,19 +408,62 @@ window.sendToTelegram = async function(button) {
         const data = await response.json();
         
         if(data.ok) {
-            document.querySelector('.rsvp__form').reset();
-            alert('✅ Спасибо! Ответ отправлен');
+            // ✅ Очищаем форму
+            const form = document.querySelector('.rsvp__form');
+            if (form) form.reset();
+            
+            // ✅ Показываем красивое сообщение об успехе
+            const successDiv = document.createElement('div');
+            successDiv.style.cssText = `
+                background: #4CAF50;
+                color: white;
+                padding: 20px;
+                border-radius: 15px;
+                margin: 20px 0;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bold;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            `;
+            successDiv.innerText = '✅ Спасибо! Ваш ответ отправлен. Страница обновится...';
+            
+            // Вставляем сообщение перед формой
+            const formContainer = document.querySelector('.rsvp__container');
+            if (formContainer) {
+                formContainer.parentNode.insertBefore(successDiv, formContainer);
+            }
+            
+            // ✅ Обновляем страницу через 2 секунды
+            setTimeout(() => {
+                location.reload(); // перезагрузка
+            }, 2000);
+            
         } else {
+            // Ошибка от Telegram
             alert('❌ Ошибка: ' + data.description);
+            button.disabled = false;
+            button.innerText = originalText;
         }
     } catch (error) {
-        alert('❌ Ошибка отправки');
-    } finally {
+        alert('❌ Ошибка отправки. Проверьте интернет.');
         button.disabled = false;
         button.innerText = originalText;
     }
+    
+    // Важно для мобильных устройств!
     return false;
 };
+
+// Дополнительная защита для мобильных: отключаем стандартное поведение формы
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.rsvp__form');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            return false;
+        });
+    }
+});
 </script>
 </div>
 </form>
