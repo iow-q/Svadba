@@ -370,16 +370,27 @@
 <button name="Отклонено" onclick="sendToTelegram(); return false;" class="rsvp__button">Отклонить</button>
 	</div>
 	<script>
-window.sendToTelegram = function(button) {
+window.sendToTelegram = async function(button) {
+    // Находим форму
+    const form = document.querySelector('.rsvp__form');
+    const nameInput = document.querySelector('input[name="Имя и фамилия"]');
+    const name = nameInput?.value.trim();
+    
+    // Валидация
+    if (!name) {
+        alert('Пожалуйста, введите имя');
+        nameInput?.focus();
+        return false;
+    }
+    
+    // Блокируем кнопку, чтобы не жали 100 раз
+    button.disabled = true;
+    const originalText = button.innerText;
+    button.innerText = '⏳ Отправка...';
+    
     try {
-        const name = document.querySelector('input[name="Имя и фамилия"]')?.value;
-        if (!name) {
-            alert('Пожалуйста, введите имя');
-            return false;
-        }
-        
         const wantToSpeak = document.getElementById('plusOne')?.checked ? 'Да' : 'Нет';
-        const decision = button.innerText; // "Подтвердить" или "Отклонить"
+        const decision = originalText; // "Подтвердить" или "Отклонить"
         
         const message = `🔔 Новый ответ!
 👤 Имя: ${name}
@@ -389,27 +400,62 @@ window.sendToTelegram = function(button) {
         const botToken = '8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw';
         const chatId = '7126119080';
         
-        fetch(`https://api.telegram.org/bot8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw/sendMessage`, {
+        const response = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
                 chat_id: chatId,
                 text: message
             })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if(data.ok) {
-                alert('✅ Отправлено! Спасибо!');
-            } else {
-                alert('❌ Ошибка: ' + data.description);
-            }
-        })
-        .catch(error => {
-            alert('❌ Ошибка отправки. Проверьте интернет.');
         });
+        
+        const data = await response.json();
+        
+        if(data.ok) {
+            // ✅ Всё ок — очищаем форму
+            form.reset(); // магия!
+            
+            // Показываем красивое сообщение
+            const successMessage = document.createElement('div');
+            successMessage.style.cssText = `
+                background: #4CAF50;
+                color: white;
+                padding: 15px;
+                border-radius: 10px;
+                margin: 10px 0;
+                text-align: center;
+                font-size: 18px;
+                animation: fadeOut 3s forwards;
+            `;
+            successMessage.innerText = '✅ Спасибо! Ваш ответ отправлен.';
+            
+            // Добавляем анимацию
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fadeOut {
+                    0% { opacity: 1; }
+                    70% { opacity: 1; }
+                    100% { opacity: 0; display: none; }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Вставляем сообщение перед формой
+            form.parentNode.insertBefore(successMessage, form);
+            
+            // Удаляем сообщение через 3 секунды
+            setTimeout(() => successMessage.remove(), 3000);
+        } else {
+            alert('❌ Ошибка: ' + data.description);
+        }
     } catch (error) {
-        alert('Что-то пошло не так: ' + error.message);
+        alert('❌ Ошибка отправки. Проверьте интернет.');
+    } finally {
+        // Разблокируем кнопку через 3 секунды
+        setTimeout(() => {
+            button.disabled = false;
+            button.innerText = originalText;
+        }, 3000);
     }
     return false;
 };
