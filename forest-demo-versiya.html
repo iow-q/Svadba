@@ -370,18 +370,21 @@
 <button name="Отклонено" onclick="sendToTelegram(); return false;" class="rsvp__button">Отклонить</button>
 	</div>
 	<script>
-// ГЛОБАЛЬНАЯ функция - будет видна везде!
-window.sendToTelegram = function() {
+window.sendToTelegram = function(button) {
     try {
-        const name = document.querySelector('input[name="Имя и фамилия"]')?.value || 'не указано';
-        const wantToSpeak = document.getElementById('plusOne')?.checked ? '✅ Да' : '❌ Нет';
-        const buttonText = event?.target?.innerText || 'Подтвердить';
+        const name = document.querySelector('input[name="Имя и фамилия"]')?.value;
+        if (!name) {
+            alert('Пожалуйста, введите имя');
+            return false;
+        }
         
-        const message = `🔔 НОВЫЙ ОТВЕТ!
+        const wantToSpeak = document.getElementById('plusOne')?.checked ? 'Да' : 'Нет';
+        const decision = button.innerText; // "Подтвердить" или "Отклонить"
         
+        const message = `🔔 Новый ответ!
 👤 Имя: ${name}
 🎤 Сказать слово: ${wantToSpeak}
-📌 Решение: ${buttonText}`;
+📌 Решение: ${decision}`;
 
         const botToken = '8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw';
         const chatId = '7126119080';
@@ -397,19 +400,18 @@ window.sendToTelegram = function() {
         .then(response => response.json())
         .then(data => {
             if(data.ok) {
-                alert('✅ Отправлено!');
+                alert('✅ Отправлено! Спасибо!');
             } else {
                 alert('❌ Ошибка: ' + data.description);
             }
         })
         .catch(error => {
-            alert('❌ Ошибка отправки');
-            console.error(error);
+            alert('❌ Ошибка отправки. Проверьте интернет.');
         });
     } catch (error) {
-        console.error('Ошибка в функции:', error);
-        alert('Ошибка: ' + error.message);
+        alert('Что-то пошло не так: ' + error.message);
     }
+    return false;
 };
 </script>
 </div>
