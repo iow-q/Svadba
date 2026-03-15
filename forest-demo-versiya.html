@@ -374,14 +374,12 @@
 window.sendToTelegram = function() {
     try {
         const name = document.querySelector('input[name="Имя и фамилия"]')?.value || 'не указано';
-        const persons = document.querySelector('input[name="Количество"]')?.value || '1';
         const wantToSpeak = document.getElementById('plusOne')?.checked ? '✅ Да' : '❌ Нет';
         const buttonText = event?.target?.innerText || 'Подтвердить';
         
         const message = `🔔 НОВЫЙ ОТВЕТ!
         
 👤 Имя: ${name}
-👥 Количество: ${persons}
 🎤 Сказать слово: ${wantToSpeak}
 📌 Решение: ${buttonText}`;
 
