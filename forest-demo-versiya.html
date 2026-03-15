@@ -366,8 +366,8 @@
 
 	
 	
-<button name="Принято"  onclick="sendToTelegram(); return false;" class="rsvp__button">Подтвердить</button>
-<button name="Отклонено" onclick="sendToTelegram(); return false;" class="rsvp__button">Отклонить</button>
+<button name="Принято" onclick="sendToTelegram(this); return false;" class="rsvp__button">Подтвердить</button>
+<button name="Отклонено" onclick="sendToTelegram(this); return false;" class="rsvp__button">Отклонить</button>
 	</div>
 	<script>
 window.sendToTelegram = async function(button) {
