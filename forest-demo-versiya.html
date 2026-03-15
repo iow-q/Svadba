@@ -397,8 +397,16 @@ window.sendToTelegram = function(button) {
     const decision = originalText;
     const message = `🔔 Новый ответ!\n👤 Имя: ${name}\n🎤 Сказать слово: ${wantToSpeak}\n📌 Решение: ${decision}`;
     const botToken = '8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw';
-    const chatId = '7126119080';
-    const url = `https://api.telegram.org/botAAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw/sendMessage?chat_id=7126119080&text=${encodeURIComponent(message)}`;
+        const chatId = '7126119080';
+        
+        fetch(`https://api.telegram.org/bot8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw/sendMessage`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                chat_id: chatId,
+                text: message
+            })
+        })
     
     // Функция для показа успеха (одинаковая для всех способов)
     function showSuccess() {
