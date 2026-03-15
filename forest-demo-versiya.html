@@ -371,7 +371,7 @@
 	</div>
 	<script>
 window.sendToTelegram = function(button) {
-    // Защита от дурака
+    
     if (!button) return false;
     
     // Получаем имя
@@ -383,12 +383,10 @@ window.sendToTelegram = function(button) {
         return false;
     }
     
-    // Блокируем кнопку
     button.disabled = true;
     const originalText = button.innerText;
     button.innerText = '✅ Отправлено!';
     
-    // Очищаем форму СРАЗУ
     const form = document.querySelector('.rsvp__form');
     if (form) form.reset();
     
@@ -412,7 +410,7 @@ window.sendToTelegram = function(button) {
         formContainer.parentNode.insertBefore(successDiv, formContainer);
     }
     
-    // Отправляем в Telegram через JSONP (обходит защиту!)
+    // Отправляем в Telegram
     const wantToSpeak = document.getElementById('plusOne')?.checked ? 'Да' : 'Нет';
     const decision = originalText;
     
@@ -420,7 +418,7 @@ window.sendToTelegram = function(button) {
     const botToken = '8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw';
     const chatId = '7126119080';
     
-    // Используем скрытый iframe вместо fetch (работает на 100% мобильных)
+    // Используем скрытый iframe для отправки
     const iframe = document.createElement('iframe');
     iframe.style.display = 'none';
     iframe.src = `https://api.telegram.org/bot8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw/sendMessage?chat_id=7126119080&text=${encodeURIComponent(message)}`;
@@ -429,17 +427,14 @@ window.sendToTelegram = function(button) {
     // Удаляем iframe через секунду
     setTimeout(() => {
         document.body.removeChild(iframe);
+        // Разблокируем кнопку, если хочешь, можно оставить как есть
+        // button.disabled = false; 
+        // button.innerText = originalText;
     }, 1000);
-    
-    // Перезагружаем через 2 секунды
-    setTimeout(() => {
-        location.reload();
-    }, 2000);
     
     return false;
 };
 
-// Отключаем стандартную отправку формы
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.rsvp__form');
     if (form) {
