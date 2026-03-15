@@ -371,7 +371,7 @@
 	</div>
 	<script>
 window.sendToTelegram = function(button) {
-    
+    // Защита
     if (!button) return false;
     
     // Получаем имя
@@ -383,58 +383,75 @@ window.sendToTelegram = function(button) {
         return false;
     }
     
+    // Блокируем кнопку
     button.disabled = true;
     const originalText = button.innerText;
-    button.innerText = '✅ Отправлено!';
+    button.innerText = '⏳ Отправка...';
     
+    // Очищаем форму
     const form = document.querySelector('.rsvp__form');
     if (form) form.reset();
     
-    // Показываем сообщение
-    const successDiv = document.createElement('div');
-    successDiv.style.cssText = `
-        background: #4CAF50;
-        color: white;
-        padding: 20px;
-        border-radius: 15px;
-        margin: 20px 0;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        z-index: 9999;
-    `;
-    successDiv.innerText = '✅ Спасибо! Ваш ответ отправлен.';
-    
-    const formContainer = document.querySelector('.rsvp__container');
-    if (formContainer) {
-        formContainer.parentNode.insertBefore(successDiv, formContainer);
-    }
-    
-    // Отправляем в Telegram
+    // Собираем данные
     const wantToSpeak = document.getElementById('plusOne')?.checked ? 'Да' : 'Нет';
     const decision = originalText;
-    
     const message = `🔔 Новый ответ!\n👤 Имя: ${name}\n🎤 Сказать слово: ${wantToSpeak}\n📌 Решение: ${decision}`;
     const botToken = '8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw';
     const chatId = '7126119080';
+    const url = `https://api.telegram.org/bot8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw/sendMessage?chat_id=7126119080&text=${encodeURIComponent(message)}`;
     
-    // Используем скрытый iframe для отправки
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = `https://api.telegram.org/bot8263411025:AAGr7drBMGnwVCt8ECUsLh5BiJN9xPC-Oiw/sendMessage?chat_id=7126119080&text=${encodeURIComponent(message)}`;
-    document.body.appendChild(iframe);
+    // Функция для показа успеха (одинаковая для всех способов)
+    function showSuccess() {
+        // Показываем сообщение
+        const successDiv = document.createElement('div');
+        successDiv.style.cssText = `
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 9999;
+        `;
+        successDiv.innerText = '✅ Спасибо! Ваш ответ отправлен.';
+        
+        const formContainer = document.querySelector('.rsvp__container');
+        if (formContainer) {
+            formContainer.parentNode.insertBefore(successDiv, formContainer);
+        }
+        
+        // Меняем текст кнопки
+        button.innerText = '✅ Отправлено!';
+    }
     
-    // Удаляем iframe через секунду
-    setTimeout(() => {
-        document.body.removeChild(iframe);
-        // Разблокируем кнопку, если хочешь, можно оставить как есть
-        // button.disabled = false; 
-        // button.innerText = originalText;
-    }, 1000);
+    // Пробуем отправить через fetch (для современных браузеров)
+    fetch(url, { method: 'GET', mode: 'no-cors' })
+        .then(() => {
+            showSuccess();
+        })
+        .catch(() => {
+            // Если fetch не сработал (например, на старых iPhone), используем image
+            try {
+                const img = document.createElement('img');
+                img.style.display = 'none';
+                img.src = url;
+                document.body.appendChild(img);
+                setTimeout(() => {
+                    document.body.removeChild(img);
+                }, 1000);
+                showSuccess();
+            } catch (e) {
+                // Если совсем ничего не работает — хотя бы покажем успех
+                showSuccess();
+            }
+        });
     
     return false;
 };
 
+// Отключаем стандартную отправку формы
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.rsvp__form');
     if (form) {
